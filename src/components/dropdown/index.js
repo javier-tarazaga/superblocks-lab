@@ -35,7 +35,7 @@ export class DropdownContainer extends Component {
     }
 
     showMenu = (showMenu) => {
-        this.setState({ showMenu: true });
+        this.setState({ showMenu: !this.state.showMenu });
     }
 
     closeMenu = () => {
@@ -63,6 +63,7 @@ export class DropdownContainer extends Component {
             {main}
             { this.state.showMenu ?
                     <Dropdown
+                        disableOnClickOutside={true}
                         handleClickOutside={this.closeMenu}
                         handleClickInside={this.closeMenu}>
                         { dropdownContent }
