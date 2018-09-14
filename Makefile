@@ -25,7 +25,7 @@ ORIGIN_DEV=http://localhost:$(PORT)
 endif
 
 ifndef ORIGIN_DIST
-ORIGIN_DIST=https://studio.superblocks.com
+ORIGIN_DIST=https://lab.superblocks.com
 endif
 
 watch: build_external_dev
