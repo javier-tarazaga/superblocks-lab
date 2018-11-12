@@ -27,9 +27,6 @@ import * as analytics from './analytics';
 // Load generic CSS
 import './style/index.less';
 
-// TODO - Components
-// import Loading from './components/Loading';
-
 const { persistor, store } = configureStore();
 // persistor.purge(); // Debug to clear persist
 
