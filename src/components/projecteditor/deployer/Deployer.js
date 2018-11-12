@@ -23,6 +23,7 @@ import { IconRun } from '../../icons';
 import Tx from '../../../ethereumjs-tx-1.3.3.min.js';
 import Modal from '../../modal';
 import Tooltip from '../../tooltip';
+import * as analytics from '../../../analytics';
 
 export default class Deployer extends Component {
 
@@ -261,6 +262,7 @@ export default class Deployer extends Component {
                                     'Waiting for contract to be deployed...'
                                 );
                                 this._waitContract(obj, status => {
+                                    analytics.logEvent('CONTRACT_DEPLOYED', { network: env });
                                     this._buildJs(obj, status => {
                                         if (status != 0) {
                                             this.callback(1);
@@ -271,6 +273,7 @@ export default class Deployer extends Component {
                                                 this.callback(1);
                                                 return;
                                             }
+
                                             this.callback(0);
                                         });
                                     });
