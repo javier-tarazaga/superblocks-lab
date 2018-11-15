@@ -23,7 +23,7 @@ import { IconRun } from '../../icons';
 import Tx from '../../../ethereumjs-tx-1.3.3.min.js';
 import Modal from '../../modal';
 import Tooltip from '../../tooltip';
-import * as analytics from '../../../analytics';
+import * as analytics from '../../../utils/analytics';
 
 export default class Deployer extends Component {
 
