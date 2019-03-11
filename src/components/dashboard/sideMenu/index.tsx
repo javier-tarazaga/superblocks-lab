@@ -17,14 +17,12 @@
 import React, { Component } from 'react';
 import style from './style.less';
 import {
-    IconTrash,
     IconRecent
 } from '../../icons';
 
 export enum ItemType {
     Recent,
-    All,
-    Deleted
+    All
 }
 
 interface IProps {
@@ -46,10 +44,6 @@ export default class SideMenu extends Component<IProps> {
                 </div>
                 <div className={style.item} onClick={() => this.onItemSelected(ItemType.All)}>
                     <span>Your Projects</span>
-                </div>
-                <div className={style.item} onClick={() => this.onItemSelected(ItemType.Deleted)}>
-                    <IconTrash/>
-                    <span>Deleted Projects</span>
                 </div>
             </div>
         );
